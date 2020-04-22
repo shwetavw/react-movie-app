@@ -1,0 +1,41 @@
+.contentbody-grid h1 {
+    font-family: 'Abel', sans-serif;
+    font-size:42px;
+  }
+  
+  .contentbody-grid-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+  
+  .contentbody-grid-element {
+    max-height: 430px;
+    background: #353535;    
+    animation: animateGrid 0.5s;
+    overflow: hidden;
+  }
+  
+  @keyframes animateGrid {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+  
+  @media screen and (max-width: 720px) {
+    .contentbody-grid-content {
+      grid-template-columns: auto auto;
+    }
+  
+    .contentbody-grid-element:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  
+    .contentbody-grid h1 {
+      font-size:22px;
+    }
+  }
